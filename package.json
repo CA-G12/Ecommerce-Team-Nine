@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce-team-nine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CA-G12/Ecommerce-Team-Nine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CA-G12/Ecommerce-Team-Nine/issues"
+  },
+  "homepage": "https://github.com/CA-G12/Ecommerce-Team-Nine#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
+}

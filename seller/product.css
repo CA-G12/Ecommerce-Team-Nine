@@ -22,10 +22,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 0em 2em 0em;
   position: fixed;
-  background-color: rgb(255, 255, 255);
   height: 4em;
+  padding: 1rem 5rem;
+  background-color: var(--main-color);
   width: 100%;
 }
 .logo {
@@ -174,5 +174,29 @@ main {
 .productImg {
   width: 300px;
 }
+
+/** filters section */
+.sellerFilters {
+  width: 20%;
+  background-color: #a50e43;
+}
+
+.priceTypes,
+.categoryTypes {
+  background-color: #ddd;
+}
+
+.sellerFilters a {
+  text-decoration: none;
+  color: black;
+}
+
+.blackSqure {
+  width: 1rem;
+  height: 1rem;
+  background-color: black;
+}
+
+/** End of filters section */
 
 /*! End of seller */

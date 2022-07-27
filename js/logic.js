@@ -8,26 +8,27 @@ let addItem = document.querySelector('.add-item');
 
 addItem.addEventListener('click', addToProducts);
 
-let products = [];
+const products = [];
 
 function addToProducts(e) {
     e.preventDefault();
-    creatElementDom(createItem())
-    products.push(createItem());
+    let item = createItem();
+    creatElementDom(item)
+    products.push(item);
     localStorage.setItem('products', JSON.stringify(products))
 }
 // const addProduct =  (products, newProduct) => {
 //     return [...products, newProduct]
 // }
+let i = 0;
 function createItem() {
-    let i = 1;
     let item = {
         id: i,
         productName: productName.value,
         productPrice: productPrice.value,
         productImg: productImg.value,
-        productDetails: productDetails.value,
-        category: category.value,
+        productDescription: productDetails.value,
+        category: category.options[category.selectedIndex].value,
     }
     i++;
     return item;
@@ -44,20 +45,14 @@ function creatElementDom(item) {
     let cardName = document.createElement('h3');
     itemsContainer.appendChild(card);
     card.appendChild(cardName);
-    let productDetails = document.createElement('p');
-    productDetails.classList.add('productDetails');
-    card.appendChild(productDetails)
-    productDetails.textContent = item.productDetails;
+    let productDescription = document.createElement('p');
+    productDescription.classList.add('productDescription');
+    card.appendChild(productDescription)
+    productDescription.textContent = item.productDescription;
     cardName.textContent = item.productName;
-    console.log(category);
-
-
-    productName.value = '';
-    productPrice.value = '';
-    productDetails.value = '';
-    productImg.value = '';
 }
 
-// products = JSON.parse(localStorage.getItem('products'))
 
+
+// products = JSON.parse(localStorage.getItem('products'))
 //! End of seller

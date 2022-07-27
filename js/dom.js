@@ -92,3 +92,28 @@ function creatElementDom(item) {
     productDetails.value = '';
     productImg.value = '';
 }
+
+function createProductLandingPage (products) {
+    for(let i = 0; i < 4; i++) {
+        let random = Math.floor(Math.random() * 10);
+        let container = document.querySelector(`#product-landing .contianer`);
+        let card = document.createElement(`div`)
+        card.classList.add(`card`);
+        let imgDiv = document.createElement(`div`);
+        let cardImg = document.createElement(`img`);
+        card.appendChild(imgDiv.appendChild(cardImg));
+        cardImg.src = products[random].img;
+        cardImg.alt = products[random].title;
+        let priceBtnTitleDiv = document.createElement(`div`);
+        let priceTitleDiv = document.createElement(`div`);
+        let h2 = document.createElement(`h2`)
+        h2.textContent = products[random].title;
+        let para = document.createElement(`p`);
+        para.textContent = products[random].price;
+        priceBtnTitleDiv.appendChild(priceTitleDiv.appendChild(h2, para));
+        let btn = document.createElement(`button`);
+        btn.textContent = `Add to card`;
+        priceBtnTitleDiv.appendChild(btn);
+        container.appendChild(card);
+    }
+}

@@ -104,6 +104,8 @@ function createProductLandingPage (products) {
         card.appendChild(imgDiv.appendChild(cardImg));
         cardImg.src = products[random].img;
         cardImg.alt = products[random].title;
+
+
         let priceBtnTitleDiv = document.createElement(`div`);
         let priceTitleDiv = document.createElement(`div`);
         let h2 = document.createElement(`h2`)
@@ -115,5 +117,6 @@ function createProductLandingPage (products) {
         btn.textContent = `Add to card`;
         priceBtnTitleDiv.appendChild(btn);
         container.appendChild(card);
+        container.appendChild(priceBtnTitleDiv)
     }
 }

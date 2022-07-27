@@ -3,7 +3,6 @@ html {
     font-size : 62.5%;
 }
 
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -52,3 +51,14 @@ body{
     padding: 5rem;
 }
 
+/*! Seller Start here */
+.seller-item {
+  background-color: salmon;
+  width: 300px;
+}
+
+.productImg {
+  width: 300px;
+}
+
+/*! End of seller */

@@ -70,6 +70,7 @@ body{
     flex: 1;
     background-color:rgb(235,235,235);
     margin-right: 1rem;
+    padding-left:1rem;
 }
 
 /* Begining of the Products Section */
@@ -195,3 +196,29 @@ body{
 }
 
 /* End of the Prouduct Section. */
+
+/* Begining of filter section */
+.catagory-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:7rem 4rem 4rem 4rem;    
+}
+.filter{
+    font-size: 2rem;
+    padding-bottom: 1em;
+}
+.filter-price-section{
+    padding:1rem 0rem 1rem 0rem;
+}
+.filter-catagory-section{
+    padding:1rem 0rem 1rem 0rem;
+
+}
+.choice{
+    margin: 1rem;
+}
+label{
+    font-size: 1.6rem;
+}
+/* End of filter section */

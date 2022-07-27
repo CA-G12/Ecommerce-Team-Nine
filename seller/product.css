@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  font-size : 62.5%;
+}
+
 :root {
   --main-color: #fff;
   --second-color: #a50e43;
@@ -21,18 +25,17 @@
   padding: 2rem 5rem;
   background-color: rgb(255, 255, 255);
   height: 4em;
+
   width: 100%;
 }
-
 .logo {
   font-style: normal;
   color: #333333;
   padding-left: 2em;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 300;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-
 .red {
   color: #a50e43;
   font-weight: 600;
@@ -47,7 +50,7 @@
   width: 20%;
   border-radius: 25px;
   border-style: solid;
-  border-color: var(--black);
+  border-color: #000000;
   border-width: 1px;
 }
 

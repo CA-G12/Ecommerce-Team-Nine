@@ -164,6 +164,7 @@ main {
   outline: 2px solid var(--second-color);
   color: var(--second-color);
 }
+
 /*! Seller Start here */
 .seller-item {
   background-color: salmon;

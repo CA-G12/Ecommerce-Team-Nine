@@ -1,11 +1,94 @@
 //Function to create list item
-function creatListElement(item){
-    let products = document.getElementById('products');
 
+let cart = []; 
+localStorage.setItem('cart', JSON.stringify(cart));
+
+const pageTitle = checkPage();
+console.log(pageTitle)
+if(pageTitle !== "cart.html"){
+    renderProducts();
+} else {
+    cartRender();
+}
+
+
+function renderProducts() {
+    let products = JSON.parse(localStorage.getItem('products'));
+    products.forEach(item => {
+        creatListElement(item)
+    })
+}
+
+function cartRender(){
+  let localCart = JSON.parse(localStorage.getItem('cart'));
+  console.log(localCart);
+   products.filter(item => {
+    localCart.forEach(el => {
+        if(item.id === el){
+            creatListElement(item);
+        }
+    })
+   });
+}
+
+function checkPage(){
+    const thisPageLocation = window.location.href;
+    let pageTitle = thisPageLocation.split("/")[4];
+    return pageTitle;
+}
+
+
+//Sorting
+document.getElementById('highestSort').addEventListener('click', sortHighest);
+document.getElementById('lowestSort').addEventListener('click', sortLowest);
+
+
+
+function sortHighest(){
+
+    let product = document.getElementById('products');
+    product.textContent = "";
+    let h1 = document.createElement('h1');
+    product.appendChild(h1);
+    h1.textContent = "Highest Price";
+    h1.classList.add("products-title")
+    let products = JSON.parse(localStorage.getItem('products'));
+    let sortedArr = products.sort((a,b) => (a.productPrice > b.productPrice) ? 1 : ((b.productPrice > a.productPrice) ? -1 : 0));
+    localStorage.clear();
+    localStorage.setItem('products', JSON.stringify(sortedArr));
+    renderProducts();
+}
+
+
+
+function sortLowest(){
+    let product = document.getElementById('products');
+    product.textContent = "";
+    let h1 = document.createElement('h1');
+    product.appendChild(h1);
+    h1.textContent = "Lowest Price";
+    h1.classList.add("products-title")
+    let products = JSON.parse(localStorage.getItem('products'));
+    let sortedArr = products.sort((a,b) => (a.productPrice < b.productPrice) ? 1 : ((b.productPrice < a.productPrice) ? -1 : 0));
+    localStorage.clear();
+    localStorage.setItem('products', JSON.stringify(sortedArr));
+    renderProducts();
+}
+
+
+function addItemsToCart(){
+   
+}
+
+function creatListElement(item){
+    console.log(item)
+    let products = document.getElementById('products');
 
     let article = document.createElement('article');
     products.appendChild(article);
     article.classList.add('item'); 
+ 
+
     //Image Div
     let imageDiv = document.createElement('div');
     article.appendChild(imageDiv);
@@ -29,7 +112,7 @@ function creatListElement(item){
     productName.classList.add('product-title');
     let productDescirption = document.createElement('p');
     productName.appendChild(productDescirption);
-    productDescirption.textContent = item.productDetails;
+    productDescirption.textContent = item.productDescription;
 
     let productPrice = document.createElement('div');
     mainSection.appendChild(productPrice);
@@ -60,11 +143,27 @@ function creatListElement(item){
     decressButton.textContent = '-';
     
 
-    let viewMoreButton = document.createElement('button');
-    productPrice.appendChild(viewMoreButton);
-    viewMoreButton.classList.add('view-more-btn');
-    viewMoreButton.setAttribute('src', item.productImg);
+    let addToCart = document.createElement('button');
+    addToCart.textContent = "Add to Cart";
+    addToCart.setAttribute('class', "addToCart");
+    addToCart.setAttribute('value', item.id);
+
+    addToCart.addEventListener('click', ()=>{
+        if(cart.length === 0){
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        } else {
+            let newCart = localStorage.getItem('cart'); 
+            newCart.push(item); 
+            localStorage.setItem('cart', JSON.stringify(newCart));
+        }
+    })
+    
+    productPrice.appendChild(addToCart);
+    addToCart.classList.add('view-more-btn');
+    addToCart.setAttribute('src', item.productImg);
 }
+
 
 
 

@@ -7,7 +7,6 @@ let productDetails = document.querySelector('.productDetails');
 let category = document.querySelector('.category');
 let addItem = document.querySelector('.add-item');
 
-addItem.addEventListener('click', addToProducts);
 
 let products = [];
 function addToProducts(e) {
@@ -17,6 +16,14 @@ function addToProducts(e) {
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products))
 }
+
+
+
+
+
+
+
+
 // const addProduct =  (products, newProduct) => {
 //     return [...products, newProduct]
 // }
@@ -100,3 +107,8 @@ function getTasksOnLoad() {
 
 }
 //! End of seller
+
+
+
+
+

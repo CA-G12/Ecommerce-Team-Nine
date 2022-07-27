@@ -66,31 +66,77 @@
       </div>
     </header>
     <!--! End of header -->
-
     <!--! Seller -->
-    <form action="">
-      <label for="id"></label>
-      <input type="text" class="productName" placeholder="Product Name" />
-      <label for="id"></label>
-      <input type="text" class="productPrice" placeholder="Price" />
-      <label for="id"></label>
-      <select id="" class="category">
-        <option value="mobiles">Mobiles</option>
-        <option value="mobiles">Tablets</option>
-        <option value="labtops">Labtops</option>
-      </select>
-      <label for="id"></label>
-      <input type="text" class="productDetails" placeholder="Description" />
-      <label for="id"></label>
-      <input type="text" class="productImg" placeholder="Pick an image" />
+    <section class="addItemsform">
+      <form action="">
+        <label for="id"></label>
+        <input type="text" class="productName" placeholder="Product Name" />
+        <label for="id"></label>
+        <input type="text" class="productPrice" placeholder="Price" />
+        <label for="id"></label>
+        <select id="categoryList" class="category">
+          <option value="mobiles" selected>Mobiles</option>
+          <option value="tablets">Tablets</option>
+          <option value="labtops">Labtops</option>
+        </select>
+        <label for="id"></label>
+        <input type="text" class="productDetails" placeholder="Description" />
+        <label for="id"></label>
+        <input type="text" class="productImg" placeholder="Pick an image" />
 
-      <button class="add-item">Add Item</button>
-    </form>
+        <button class="add-item">Add Item</button>
+      </form>
+    </section>
 
-    <div class="Seller-items-container"></div>
+    <section class="Seller-items-container"></section>
+    <!--* filters Section  -->
+    <section class="sellerFilters">
+      <div class="priceFilters">
+        <div class="blackSqure"></div>
+        <h3 class="filterTitle">Price</h3>
+        <div class="priceTypes">
+          <div class="whiteSqure"></div>
+          <a href="#" class="highestFilter">
+            <h5 class="priceTitle">Highest</h5>
+          </a>
+        </div>
+        <div class="priceTypes">
+          <div class="whiteSqure"></div>
+          <a href="#" class="lowestFilter">
+            <h5 class="priceTitle">Lowest</h5>
+          </a>
+        </div>
+      </div>
+
+      <div class="categoryFilters">
+        <div class="blackSqure"></div>
+        <h3 class="filterTitle">Categories</h3>
+        <div class="categoryTypes">
+          <div class="whiteSqure"></div>
+          <a href="#" class="mobilesFilter">
+            <h5 class="categoryTitle">Mobiles</h5>
+          </a>
+        </div>
+        <div class="categoryTypes">
+          <div class="whiteSqure"></div>
+          <a href="#" class="tabletsFilter">
+            <h5 class="categryTitle">Tablets</h5>
+          </a>
+        </div>
+        <div class="categoryTypes">
+          <div class="whiteSqure"></div>
+          <a href="#" class="labtopsFilter">
+            <h5 class="categryTitle">Labtops</h5>
+          </a>
+        </div>
+      </div>
+      <button class="addSection">Add Items</button>
+    </section>
+    <!--* End of filters Section  -->
+
     <!--! End of seller -->
 
-    <script src="./js/logic.js"></script>
-    <script src="./js/dom.js"></script>
+    <script src="../js/logic.js"></script>
+    <script src="../js/dom.js"></script>
   </body>
 </html>

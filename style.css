@@ -159,7 +159,7 @@ html {
 
 /* Product section style starts */
 
-#product {
+#product-landing {
   background-color: var(--primary-color);
   padding: 2rem 2rem;
   width: 100%;
@@ -173,14 +173,14 @@ html {
   margin-top: 6rem;
 }
 
-#product h1 {
+#product-landing h1 {
   position: relative;
   color: #333;
   font-size: 3rem;
   opacity: 0.8;
 }
 
-#product h1::before {
+#product-landing h1::before {
   content: '';
   position: absolute;
   left: 0;
@@ -191,7 +191,7 @@ html {
   background-color: #333;
 }
 
-#product .container {
+#product-landing .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -200,21 +200,21 @@ html {
   padding: 1rem 10rem;
 }
 
-#product .container .card {
+#product-landing .container .card {
   width: calc(90% / 4);
   overflow: hidden;
 }
 
-#product .container .card div img{
+#product-landing .container .card div img{
   width: 100%;
 }
 
-#product .container .card:hover > div img {
+#product-landing .container .card:hover > div img {
   transform: scale(1.2) rotate(10deg);
   transition: all 0.2s ease-in-out;
 }
 
-#product .container .card > div {
+#product-landing .container .card > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -222,24 +222,24 @@ html {
   color: #333;
 }
 
-#product .container .card > div:nth-child(1) {
+#product-landing .container .card > div:nth-child(1) {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
   padding: 0;
 }
 
-#product .container .card > div div h2{
+#product-landing .container .card > div div h2{
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-#product .container .card > div div p {
+#product-landing .container .card > div div p {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-#product .container .card > div button {
+#product-landing .container .card > div button {
   padding: 0.5rem 1.5rem;
   background-color: var(--second-color);
   color: var(--main-color);
@@ -251,7 +251,7 @@ html {
   font-size: 1.2rem;
 }
 
-#product .container .card > div button:hover {
+#product-landing .container .card > div button:hover {
   background-color: transparent;
   outline: 2px solid var(--second-color);
   color: var(--second-color);

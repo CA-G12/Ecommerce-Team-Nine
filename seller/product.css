@@ -1,34 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap%27");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+:root {
+  --main-color: #fff;
+  --second-color: #A50E43;
+  --black: #000;
+  --primary-color: #FAFAFA;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   padding: 2rem 5rem;
   background-color: rgb(255, 255, 255);
   height: 4em;
+=======
+  padding: 1rem 5rem;
+  background-color: var(--main-color);
+>>>>>>> 644a23b5e7f176f87f2e973c57c322a8fb661dae
   width: 100%;
 }
+
 .logo {
   font-style: normal;
   color: #333333;
   padding-left: 2em;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 300;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 .red {
   color: #a50e43;
   font-weight: 600;
 }
 
-.searchbar {
-  margin-right: 4em;
+.searchbar{
+  margin-right:4em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,13 +52,171 @@
   width: 20%;
   border-radius: 25px;
   border-style: solid;
-  border-color: #000000;
+  border-color: var(--black);
   border-width: 1px;
 }
 
-.searchbar-input {
+.searchbar-input{
   outline: none;
   border: 0px solid;
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background-image: url('../img/Group\ 74.svg');
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: 'filter filter product product product product product product product product product product';
+  width: 100%;
+  padding: 2rem 5rem;
+  column-gap: 2rem;
+}
+
+#filter {
+  grid-area: filter;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.25);
+}
+
+#product {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.25);
+  padding: 2rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  grid-area: product;
+  flex-direction: column;
+}
+
+#product h1 {
+  position: relative;
+  color: #333;
+}
+
+#product h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+}
+
+#product .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+
+#product .container .card {
+  width: calc(90% / 4);
+}
+
+#product .container .card img {
+  width: 100%;
+}
+
+#product .container .card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0rem;
+  color: #333;
+}
+
+#product .container .card > div div h2{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#product .container .card > div div p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#product .container .card > div button {
+  padding: 0.5rem 1rem;
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.6rem;
+}
+
+#product .container .card > div button:hover {
+  background-color: transparent;
+  outline: 2px solid var(--second-color);
+  color: var(--second-color);
+}
+=======
+html {
+    font-size : 62.5%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  .logo {
+    font-style: normal;
+    color: #333333;
+    padding-left: 2em;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .red {
+    color: #a50e43;
+      font-weight: 600;
+  }
+  
+  .searchbar{
+      margin-right:4em;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 2.4em;
+      width:20%;
+      border-radius: 25px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1px;
+  }
+  
+  .searchbar-input{
+      outline: none;
+      border: 0px solid;
+  }
+  
+body{
+    padding: 5rem;
 }
 
 /*! Seller Start here */

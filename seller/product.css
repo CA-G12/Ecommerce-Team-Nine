@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  font-size : 62.5%;
+}
+
 :root {
   --main-color: #fff;
   --second-color: #A50E43;
@@ -18,33 +22,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-  padding: 2rem 5rem;
-  background-color: rgb(255, 255, 255);
+  position: fixed;
   height: 4em;
-=======
   padding: 1rem 5rem;
   background-color: var(--main-color);
->>>>>>> 644a23b5e7f176f87f2e973c57c322a8fb661dae
   width: 100%;
 }
-
 .logo {
   font-style: normal;
   color: #333333;
   padding-left: 2em;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 300;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-
 .red {
   color: #a50e43;
   font-weight: 600;
 }
 
-.searchbar{
-  margin-right:4em;
+.searchbar {
+  margin-right: 4em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -52,11 +50,11 @@
   width: 20%;
   border-radius: 25px;
   border-style: solid;
-  border-color: var(--black);
+  border-color: #000000;
   border-width: 1px;
 }
 
-.searchbar-input{
+.searchbar-input {
   outline: none;
   border: 0px solid;
 }
@@ -165,58 +163,6 @@ main {
   background-color: transparent;
   outline: 2px solid var(--second-color);
   color: var(--second-color);
-}
-=======
-html {
-    font-size : 62.5%;
-}
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5rem;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-  }
-  .logo {
-    font-style: normal;
-    color: #333333;
-    padding-left: 2em;
-    font-size: 2.8rem;
-    font-weight: 300;
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  .red {
-    color: #a50e43;
-      font-weight: 600;
-  }
-  
-  .searchbar{
-      margin-right:4em;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 2.4em;
-      width:20%;
-      border-radius: 25px;
-      border-style: solid;
-      border-color: #000000;
-      border-width: 1px;
-  }
-  
-  .searchbar-input{
-      outline: none;
-      border: 0px solid;
-  }
-  
-body{
-    padding: 5rem;
 }
 
 /*! Seller Start here */

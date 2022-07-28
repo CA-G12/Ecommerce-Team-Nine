@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>BMFAMOB</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="logo">
+            <span class="red">BMFA</span>MOB</h1>
+        <div class="searchbar">
+          <input class="searchbar-input" type="text" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i>  
+        </div>
+        
+    </header>
+
+    <div class="container">
+        <!-- First Element -->
+        <section class="catagory">
+            <section class="catagory-list">
+                <section class="filter-price-section">
+                    <p class="filter">price</p>
+                    <input class="choice" type="radio" name="price" id="highestSort" class="price" value="highest">
+                    <label for="highest" class="price">Highest</label><br>
+                    <input class="choice" type="radio" name="price" id="lowestSort" class="price" value="lowest">
+                    <label for="lowest" class="price">Lowest</label>
+                </section>
+                <section class="filter-catagory-section">
+                    <p class="filter">Category</p>
+                    <input class="choice" type="checkbox" name="category" id="mobile" value="mobile">
+                    <label for="mobile">Mobile</label>
+                    <br>
+                    <input class="choice" type="checkbox" name="category" id="tablet" value="tablet">
+                    <label for="tablet">Tablet</label>
+                    <br>
+                    <input class="choice" type="checkbox" name="category" id="laptops" value="laptops">
+                    <label for="laptops">Laptops</label>
+                </section>    
+            </section> 
+        </section>
+
+
+        <!-- Second Element -->
+        <div id="products" class="products products-list">
+            <h1 class="products-title">Products</h1>
+            <hr class="product-hr">
+
+       
+        </div>
+        <script src="../js/logic.js"></script>
+        <script src="../js/dom.js"></script>
+</body>
+
+</html>

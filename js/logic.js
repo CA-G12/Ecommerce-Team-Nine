@@ -8,7 +8,7 @@ let category = document.querySelector('.category');
 let addItem = document.querySelector('.add-item');
 
 
-let products = [];
+// let products = [];
 function addToProducts(e) {
     e.preventDefault();
     let item = createItem();
@@ -16,6 +16,33 @@ function addToProducts(e) {
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products))
 }
+
+
+const products = [];
+
+let item1 = {
+    id: 1,
+    productName: 'iPhone',
+    productPrice: '$1000',
+    productImg: 'https://images.samsung.com/ps/smartphones/galaxy-s22/buy/SM-S901_GalaxyS22_Front_PhantomWhite_Thumbnail.png',
+    productDescription: 'This is a phone',
+    category: 'Phones',
+}
+
+let item2 = {
+    id: 2,
+    productName: 'Samsung',
+    productPrice: '$1000',
+    productImg: 'https://images.samsung.com/ps/smartphones/galaxy-s22/buy/SM-S901_GalaxyS22_Front_PhantomWhite_Thumbnail.png',
+    productDescription: 'This is a phone',
+    category: 'Phones',
+}
+products.push(item1);
+products.push(item2);
+
+localStorage.setItem('products', JSON.stringify(products));
+
+
 
 
 

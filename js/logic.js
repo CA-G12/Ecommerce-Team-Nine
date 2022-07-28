@@ -8,7 +8,98 @@ let category = document.querySelector('.category');
 let addItem = document.querySelector('.add-item');
 
 
-let products = [];
+let products = [
+    {
+        id: 1,
+        productNames: 'iPhone 13 Pro',
+        productPrice: '1000$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg',
+        productDescription: '8GB/256GB/1TB storage, no card slot',
+        category: 'mobile',
+    },
+
+    {
+        id: 2,
+        productNames: 'iPhone 13',
+        productPrice: '820$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg',
+        productDescription: '128GB/256GB/512GB storage, no card slot',
+        category: 'mobile',
+    },
+
+    {
+        id: 3,
+        productNames: 'iPad 10.2 (2021)',
+        productPrice: '1100$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-102-2021-.jpg',
+        productDescription: '64GB/256GB storage, no card slot',
+        category: 'tablet',
+    },
+
+    {
+        id: 4,
+        productNames: 'Galaxy A73 5G',
+        productPrice: '420$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a73-5g.jpg',
+        productDescription: '128GB/256GB storage, microSDXC',
+        category: 'mobile',
+    },
+
+    {
+        id: 5,
+        productNames: 'Galaxy A33 5G',
+        productPrice: '350$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a33-5g.jpg',
+        productDescription: '128GB/256GB storage, microSDXC, Android 12, One UI 4.1',
+        category: 'mobile',
+    },
+
+    {
+        id: 6,
+        productNames: 'Galaxy S22 Ultra 5G',
+        productPrice: '1150$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-ultra-5g.jpg',
+        productDescription: '128GB/256GB/1TB storage, no card slot',
+        category: 'mobile',
+    },
+
+    {
+        id: 7,
+        productNames: 'Galaxy S22+ 5G',
+        productPrice: '1100$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-plus-5g.jpg',
+        productDescription: '128GB/256GB storage, no card slot',
+        category: 'mobile',
+    },
+
+    {
+        id: 8,
+        productNames: 'Galaxy Tab S8 Ultra',
+        productPrice: '900$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8-ultra.jpg',
+        productDescription: '128GB/256GB/512GB storage, microSDXC',
+        category: 'tablet',
+    },
+
+    {
+        id: 9,
+        productNames: 'Galaxy S21 FE 5G',
+        productPrice: '900$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-fe-5g.jpg',
+        productDescription: '128GB/256GB storage, no card slot',
+        category: 'mobile',
+    },
+
+    {
+        id: 10,
+        productNames: 'Galaxy S21 Ultra 5G',
+        productPrice: '1050$',
+        productImg: 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-ultra-5g-.jpg',
+        productDescription: '128GB/256GB/512GB storage, no card slot',
+        category: 'mobile',
+    },
+];
+
 function addToProducts(e) {
     e.preventDefault();
     let item = createItem();
@@ -17,16 +108,6 @@ function addToProducts(e) {
     localStorage.setItem('products', JSON.stringify(products))
 }
 
-
-
-
-
-
-
-
-// const addProduct =  (products, newProduct) => {
-//     return [...products, newProduct]
-// }
 let i = 0;
 function createItem() {
     let item = {
